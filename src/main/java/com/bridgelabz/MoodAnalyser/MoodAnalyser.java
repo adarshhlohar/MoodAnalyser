@@ -13,22 +13,22 @@ public class MoodAnalyser {
 		this.mood = mood;
 	}
 
-	//It will the MoodAnalyser deafult constructor
+	// It will the MoodAnalyser deafult constructor
 	public MoodAnalyser() {
 		
 	}
-	
 
 	// It is method if the condition is satisfy it will return "SAD" or it will
 	// return null
 	public String analyseMoodByConsructor() {
-		if (mood == "I am in Sad Mood") {
+		if (mood == "I am in Sad Mood" || mood == "I am in Happy Mood") {
 			return "Sad";
 		}
 		return null;
 
 	}
-	
+
+
 	/*
 	 * This is used for the creating object and setting by analyseMood
 	 */
@@ -38,6 +38,13 @@ public class MoodAnalyser {
 		} else {
 			return "Happy";
 		}
+	}
+	
+	/*
+	 * If the analyseMood method cannot take any parameter it should be return the mood as "Happy"
+	 */
+	public String analyseMood() {
+			return "Happy";
 	}
 
 }
