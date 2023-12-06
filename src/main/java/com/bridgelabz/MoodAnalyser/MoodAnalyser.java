@@ -20,23 +20,24 @@ public class MoodAnalyser {
 
 	// It is method if the condition is satisfy it will return "SAD" or it will
 	// return null
-	public String analyseMoodByConsructor() {
+	public String analyseMoodByConsructor() throws InvalidParameterException {
 		if (mood == "I am in Sad Mood" || mood == "I am in Happy Mood") {
 			return "Sad";
 		}
-		return null;
-
+		throw new InvalidParameterException("It is not Valid Parameter");
 	}
 
 
 	/*
 	 * This is used for the creating object and setting by analyseMood
 	 */
-	public String analyseMood(String mood) {
+	public String analyseMood(String mood) throws InvalidParameterException {
 		if (mood == "I am in Sad Mood") {
 			return "Sad";
-		} else {
+		} else if(mood == "I am in Any Mood"){
 			return "Happy";
+		}else {
+			throw new InvalidParameterException("It is not Valid Parameter");
 		}
 	}
 	
