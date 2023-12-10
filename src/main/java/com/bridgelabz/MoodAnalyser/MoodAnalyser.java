@@ -15,7 +15,7 @@ public class MoodAnalyser {
 
 	// It will the MoodAnalyser deafult constructor
 	public MoodAnalyser() {
-		
+
 	}
 
 	// It is method if the condition is satisfy it will return "SAD" or it will
@@ -27,25 +27,25 @@ public class MoodAnalyser {
 		throw new InvalidParameterException("Mood is null");
 	}
 
-
 	/*
 	 * This is used for the creating object and setting by analyseMood
 	 */
-	public String analyseMood(String mood) {
+	public String analyseMood(String mood) throws InvalidParameterException {
 		if (mood == "I am in Sad Mood") {
 			return "Sad";
 		}else if(mood == null) {
-			return "Happy";
+			throw new InvalidParameterException("Youre Entered Null ");
 		}else {
 			return "Happy";
 		}
 	}
-	
+
 	/*
-	 * If the analyseMood method cannot take any parameter it should be return the mood as "Happy"
+	 * If the analyseMood method cannot take any parameter it should be return the
+	 * mood as "Happy"
 	 */
-	public String analyseMood() {
-			return "Happy";
+	public String analyseMood() throws InvalidParameterException{
+		throw new InvalidParameterException("Youre does not Entered Anything");
 	}
 
 }
